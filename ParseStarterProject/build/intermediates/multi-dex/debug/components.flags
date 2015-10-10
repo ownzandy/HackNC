@@ -1,0 +1,34 @@
+-injars 'C:\Users\Edward\HackNC\HackNC\ParseStarterProject\build\intermediates\multi-dex\debug\allclasses.jar'
+-outjars 'C:\Users\Edward\HackNC\HackNC\ParseStarterProject\build\intermediates\multi-dex\debug\componentClasses.jar'
+
+-libraryjars 'C:\Users\Edward\AppData\Local\Android\sdk\build-tools\22.0.1\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontpreverify
+-dontwarn
+-printconfiguration 'C:\Users\Edward\HackNC\HackNC\ParseStarterProject\build\intermediates\multi-dex\debug\components.flags'
+
+
+-keep class com.parse.starter.StarterApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.parse.starter.MapActivity {
+    <init>();
+}
+
+-keep class com.parse.starter.MainActivity {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}

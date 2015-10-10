@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HackNC.iml" filepath="$PROJECT_DIR$/HackNC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HackNC.iml" filepath="$PROJECT_DIR$/HackNC.iml" />
       <module fileurl="file://$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" filepath="$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" />
     </modules>
   </component>
 </project>
+
