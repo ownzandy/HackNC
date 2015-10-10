@@ -26,6 +26,10 @@ public class MainActivity extends ActionBarActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
       ParseAnalytics.trackAppOpenedInBackground(getIntent());
+
+    Intent intent = new Intent(this, SendActivity.class);
+    startActivity(intent);
+
   }
 
   @Override
