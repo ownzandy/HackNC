@@ -8,10 +8,12 @@
  */
 package com.parse.starter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.parse.ParseAnalytics;
 import com.parse.Parse;
@@ -32,7 +34,10 @@ public class MainActivity extends ActionBarActivity {
     getMenuInflater().inflate(R.menu.menu_main, menu);
     return true;
   }
-
+  public void startSend(View view){
+    Intent intent = new Intent(this, SendActivity.class);
+    startActivity(intent);
+  }
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     // Handle action bar item clicks here. The action bar will
