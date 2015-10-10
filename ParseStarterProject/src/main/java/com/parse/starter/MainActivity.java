@@ -12,18 +12,24 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.content.Context;
+import java.io.*;
+import android.view.Gravity;
+import android.content.*;
 
-import com.parse.ParseAnalytics;
-import com.parse.Parse;
-import com.parse.ParseObject;
+import com.parse.*;
 
 public class MainActivity extends ActionBarActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_main);
       ParseAnalytics.trackAppOpenedInBackground(getIntent());
+      Intent esriIntent = new Intent(this, EsriActivity.class);
+      startActivity(esriIntent);
   }
 
   @Override
