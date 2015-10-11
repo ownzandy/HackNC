@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/logindown" android:state_pressed="true"/> <!-- pressed -->
     <item android:drawable="@drawable/loginup" /> <!-- default -->
-</selector><!-- From: file:/Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/res/drawable/login_selector_drawable.xml -->
+</selector><!-- From: file:/Users/ownzandy/GitHub/HackNC/ParseStarterProject/src/main/res/drawable/login_selector_drawable.xml -->

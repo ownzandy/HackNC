@@ -158,10 +158,12 @@ public class EsriActivity extends Activity {
                             }
                         }); */
                     }
+                    /*
                     if (System.currentTimeMillis() - p.getCreatedAt().getTime() > 2000) {
                         p.put("justSent", false);
                         p.saveInBackground();
                     }
+                    */
                     Point pointGeometry = new Point(posArr[0], posArr[1]);
                     Graphic pointGraphic = new Graphic(pointGeometry, simpleMarker);
                     graphicsLayer.addGraphic(pointGraphic);

@@ -73,10 +73,6 @@
             android:name="com.parse.starter.receiveMsgActivity"
             android:label="@string/title_activity_receive_msg" >
         </activity>
-        <activity
-            android:name="com.parse.starter.DollaActivity"
-            android:label="@string/title_activity_dolla" >
-        </activity>
     </application>
 
 </manifest>

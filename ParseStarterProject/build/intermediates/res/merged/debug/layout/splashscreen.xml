@@ -22,4 +22,4 @@
         android:textColor="@color/white"
         android:layout_below="@+id/myIcon"
         android:layout_centerHorizontal="true" />
-</RelativeLayout><!-- From: file:/Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/res/layout/splashscreen.xml -->
+</RelativeLayout><!-- From: file:/Users/ownzandy/GitHub/HackNC/ParseStarterProject/src/main/res/layout/splashscreen.xml -->
