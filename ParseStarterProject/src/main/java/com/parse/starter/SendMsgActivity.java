@@ -32,9 +32,14 @@ public class SendMsgActivity extends ActionBarActivity {
     private ImageView fromCam;
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
     private Uri fileUri;
+    private int initx;
+    private int inity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent oldIntent = getIntent();
+        initx = oldIntent.getIntExtra("xpos", 0);
+        inity = oldIntent.getIntExtra("ypos", 0);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_msg);
 
@@ -128,8 +133,11 @@ public class SendMsgActivity extends ActionBarActivity {
                     RelativeLayout.LayoutParams.WRAP_CONTENT,
                     RelativeLayout.LayoutParams.WRAP_CONTENT);
 
-            imageViewLayoutParams.addRule(RelativeLayout.BELOW, R.id.editText);
+//            imageViewLayoutParams.addRule(RelativeLayout.BELOW, R.id.editText);
+            imageViewLayoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
             imageViewLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+            imageViewLayoutParams.height=900;
+            imageViewLayoutParams.width=900;
             imageView.setLayoutParams(imageViewLayoutParams);
 
             myLayout.addView(imageView);
@@ -176,6 +184,10 @@ public class SendMsgActivity extends ActionBarActivity {
                 //get image files
                 
                 Intent i = new Intent(getBaseContext(), SendActivity.class);
+                i.putExtra("xpos", initx);
+                i.putExtra("ypos", inity);
+                i.putExtra("fileUri", fileUri.toString());
+                i.putExtra("message", myText.getText().toString());
                 startActivity(i);
             }
         });

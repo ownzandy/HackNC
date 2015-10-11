@@ -13,17 +13,21 @@
         android:id="@+id/title"
         android:layout_alignParentTop="true">
 
-        <ImageView
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="15dp"
             android:src="@drawable/icon"
+            android:background="@null"
             android:adjustViewBounds="true"
             android:maxWidth="80dp"
             android:maxHeight="80dp"
             android:scaleType="fitCenter"
-            android:id="@+id/imageView" />
+            android:id="@+id/back"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="backtoMap"/>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -36,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView android:text="Chapel Hill"
+                <TextView android:text="Your Bubble"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="30sp"
@@ -52,7 +56,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
 
-                <TextView android:text="10m away"
+                <TextView android:text="Message and Picture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/origin"
@@ -70,22 +74,25 @@
     <ImageView
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="390dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:layout_below="@id/title"
         android:id="@+id/picture"
-        android:src="@drawable/forest"
-        />
+
+        android:layout_below="@+id/title" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
         android:text="Hi from Chapel Hill!!! Working hard or hardly working? #hackNC #hackathons"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textColor="#000000"
         android:id="@+id/message"
-        android:layout_below="@id/picture"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/dim_foreground_disabled_material_dark"
+        android:backgroundTintMode="src_in"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="gravity" />
 
 </RelativeLayout>

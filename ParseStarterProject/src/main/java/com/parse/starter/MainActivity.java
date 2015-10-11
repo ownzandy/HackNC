@@ -57,7 +57,7 @@ public class MainActivity extends ActionBarActivity {
     writeMsg.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent i = new Intent(getBaseContext(), SendMsgActivity.class);
+        Intent i = new Intent(getBaseContext(), EsriActivity.class);
         startActivity(i);
       }
     });
@@ -67,7 +67,11 @@ public class MainActivity extends ActionBarActivity {
     seeMsg.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = new Intent(getBaseContext(), receiveMsgActivity.class);
+
+//s        Intent intent = new Intent(getBaseContext(), receiveMsgActivity.class);
+
+        Intent intent = new Intent(getBaseContext(), EsriActivity.class);
+
         startActivity(intent);
       }
     });

@@ -55,6 +55,9 @@ dependencies {
     compile 'com.esri.arcgis.android:arcgis-android:10.2.7'
     compile 'com.parse.bolts:bolts-android:1.2.1'
     compile 'com.parse:parse-android:1.10.3'
+    compile files('libs/nessie-java-wrapper.jar')
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile files('lib/nessie-android-wrapper-1.0.jar')
 }
 
 /* Uncomment if you enable ProGuard and you want to automatically upload symbols on build.

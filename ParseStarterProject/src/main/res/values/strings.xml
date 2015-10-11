@@ -24,6 +24,7 @@
     <string name="title_activity_esri">EsriActivity</string>
     <string name="title_activity_receive_msg">receiveMsgActivity</string>
     <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_dolla">DollaActivity</string>
 
 
 </resources>
