@@ -49,6 +49,10 @@
             android:name="com.parse.starter.EsriActivity"
             android:label="@string/title_activity_esri" >
         </activity>
+        <activity
+            android:name="com.parse.starter.SendActivity"
+            android:label="@string/title_activity_send" >
+        </activity>
     </application>
 
 </manifest>

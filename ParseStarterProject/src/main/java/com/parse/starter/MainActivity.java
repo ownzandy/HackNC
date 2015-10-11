@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.activity_main);
       ParseAnalytics.trackAppOpenedInBackground(getIntent());
-      Intent esriIntent = new Intent(this, EsriActivity.class);
+      Intent esriIntent = new Intent(this, SendActivity.class);
       startActivity(esriIntent);
   }
 
