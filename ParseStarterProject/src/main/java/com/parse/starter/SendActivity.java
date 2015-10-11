@@ -18,13 +18,14 @@ import android.widget.Toast;
 
 public class SendActivity extends AppCompatActivity {
 
-    private TextView input1;
+    private TextView input1, choice1;
     public CharSequence dragData;
     private static final String DEBUG_TAG = "Velocity";
     private VelocityTracker mVelocityTracker = null;
     private TextView textVelocityX;
     private TextView textVelocityY;
-
+    drags followTouch;
+    velocity velocityTouch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,102 +34,101 @@ public class SendActivity extends AppCompatActivity {
         textVelocityX = (TextView) findViewById(R.id.velocityx);
         textVelocityY = (TextView) findViewById(R.id.velocityy);
 
-        //get both sets of text views
-        //views to drag
-//        input1 = (TextView)findViewById(R.id.input_1);
-
-
+        input1 = (TextView)findViewById(R.id.input_1);
+        //views to drop onto
+        choice1 = (TextView)findViewById(R.id.choice_1);
         //set touch listeners
-//        input1.setOnTouchListener(new ChoiceTouchListener());
-
+        input1.setOnTouchListener(new ChoiceTouchListener());
+        //set drag listeners
+        choice1.setOnDragListener(new ChoiceDragListener());
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        int index = event.getActionIndex();
-        int action = event.getActionMasked();
-        int pointerId = event.getPointerId(index);
-
-        switch (action) {
-            case MotionEvent.ACTION_DOWN:
-                if (mVelocityTracker == null) {
-                    // Retrieve a new VelocityTracker object to watch the velocity of a motion.
-                    mVelocityTracker = VelocityTracker.obtain();
-                } else {
-                    // Reset the velocity tracker back to its initial state.
-                    mVelocityTracker.clear();
-                }
-                // Add a user's movement to the tracker.
-                mVelocityTracker.addMovement(event);
-                break;
-            case MotionEvent.ACTION_MOVE:
-                mVelocityTracker.addMovement(event);
-                // When you want to determine the velocity, call
-                // computeCurrentVelocity(). Then call getXVelocity()
-                // and getYVelocity() to retrieve the velocity for each pointer ID.
-                mVelocityTracker.computeCurrentVelocity(1000);
-                // Log velocity of pixels per second
-                // Best practice to use VelocityTrackerCompat where possible.
-                double xVelocity = VelocityTrackerCompat.getXVelocity(mVelocityTracker,
-                        pointerId);
-                double yVelocity = VelocityTrackerCompat.getYVelocity(mVelocityTracker,
-                        pointerId);
-                Log.d("", "X velocity: " + xVelocity);
-                Log.d("", "Y velocity: " + yVelocity);
-
-                textVelocityX.setText("X-velocity (pixel/s): " + xVelocity);
-                textVelocityY.setText("Y-velocity (pixel/s): " + yVelocity);
-
-                break;
-            case MotionEvent.ACTION_UP:
-            case MotionEvent.ACTION_CANCEL:
-                // Return a VelocityTracker object back to be re-used by others.
-                mVelocityTracker.recycle();
-                mVelocityTracker=null;
-                break;
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onTouchEvent(MotionEvent event) {
+//        int index = event.getActionIndex();
+//        int action = event.getActionMasked();
+//        int pointerId = event.getPointerId(index);
+//
+//        switch (action) {
+//            case MotionEvent.ACTION_DOWN:
+//                if (mVelocityTracker == null) {
+//                    // Retrieve a new VelocityTracker object to watch the velocity of a motion.
+//                    mVelocityTracker = VelocityTracker.obtain();
+//                } else {
+//                    // Reset the velocity tracker back to its initial state.
+//                    mVelocityTracker.clear();
+//                }
+//                // Add a user's movement to the tracker.
+//                mVelocityTracker.addMovement(event);
+//                break;
+//            case MotionEvent.ACTION_MOVE:
+//                mVelocityTracker.addMovement(event);
+//                // When you want to determine the velocity, call
+//                // computeCurrentVelocity(). Then call getXVelocity()
+//                // and getYVelocity() to retrieve the velocity for each pointer ID.
+//                mVelocityTracker.computeCurrentVelocity(1000);
+//                // Log velocity of pixels per second
+//                // Best practice to use VelocityTrackerCompat where possible.
+//                double xVelocity = VelocityTrackerCompat.getXVelocity(mVelocityTracker,
+//                        pointerId);
+//                double yVelocity = VelocityTrackerCompat.getYVelocity(mVelocityTracker,
+//                        pointerId);
+//                Log.d("", "X velocity: " + xVelocity);
+//                Log.d("", "Y velocity: " + yVelocity);
+//
+//                textVelocityX.setText("X-velocity (pixel/s): " + xVelocity);
+//                textVelocityY.setText("Y-velocity (pixel/s): " + yVelocity);
+//
+//                break;
+//            case MotionEvent.ACTION_UP:
+//            case MotionEvent.ACTION_CANCEL:
+//                // Return a VelocityTracker object back to be re-used by others.
+//                mVelocityTracker.recycle();
+//                mVelocityTracker = null;
+//                break;
+//        }
+//        return true;
+//    }
 
     /**
      * ChoiceTouchListener will handle touch events on draggable views
-     *
      */
     private final class ChoiceTouchListener implements View.OnTouchListener {
         @SuppressLint("NewApi")
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
-            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-            /*
-             * Drag details: we only need default behavior
-             * - clip data could be set to pass data as part of drag
-             * - shadow can be tailored
-             */
-                ClipData data = ClipData.newPlainText("", "");
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
-                //start dragging the item touched
-                view.startDrag(data, shadowBuilder, view, 0);
-                return true;
-            } else {
-                return false;
-            }
+//            followTouch.(view, motionEvent);
+//                ClipData data = ClipData.newPlainText("", "");
+//                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+//                //start dragging the item touched
+//                view.startDrag(data, shadowBuilder, view, 0);
+//                return true;
+
+            velocityTouch.touches(motionEvent);
+
+            ClipData data = ClipData.newPlainText("", "");
+            View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+            //start dragging the item touched
+            view.startDrag(data, shadowBuilder, view, 0);
+            return true;
         }
     }
+
 
     /**
      * DragListener will handle dragged views being dropped on the drop area
      * - only the drop action will have processing added to it as we are not
      * - amending the default behavior for other parts of the drag process
-     *
      */
     @SuppressLint("NewApi")
     private class ChoiceDragListener implements View.OnDragListener {
-
         @Override
         public boolean onDrag(View v, DragEvent event) {
+            View view = (View) event.getLocalState();
             switch (event.getAction()) {
                 case DragEvent.ACTION_DRAG_STARTED:
                     //no action necessary
+                    view.setVisibility(View.INVISIBLE);
                     break;
                 case DragEvent.ACTION_DRAG_ENTERED:
                     //no action necessary
@@ -137,16 +137,12 @@ public class SendActivity extends AppCompatActivity {
                     //no action necessary
                     break;
                 case DragEvent.ACTION_DROP:
-
-                    //handle the dragged view being dropped over a drop view
-                    View view = (View) event.getLocalState();
                     //view dragged item is being dropped on
                     TextView dropTarget = (TextView) v;
                     //view being dragged and dropped
                     TextView dropped = (TextView) view;
                     //checking whether first character of dropTarget equals first character of dropped
-                    if(dropTarget.getText().toString().charAt(0) == dropped.getText().toString().charAt(0))
-                    {
+                    if (dropTarget.getText().toString().charAt(0) == dropped.getText().toString().charAt(0)) {
                         //stop displaying the view where it was before it was dragged
                         view.setVisibility(View.INVISIBLE);
                         //update the text in the target view to reflect the data being dropped
@@ -156,10 +152,9 @@ public class SendActivity extends AppCompatActivity {
                         //if an item has already been dropped here, there will be a tag
                         Object tag = dropTarget.getTag();
                         //if there is already an item here, set it back visible in its original place
-                        if(tag!=null)
-                        {
+                        if (tag != null) {
                             //the tag is the view id already dropped here
-                            int existingID = (Integer)tag;
+                            int existingID = (Integer) tag;
                             //set the original view visible again
                             findViewById(existingID).setVisibility(View.VISIBLE);
                         }
@@ -167,8 +162,7 @@ public class SendActivity extends AppCompatActivity {
                         dropTarget.setTag(dropped.getId());
                         //remove setOnDragListener by setting OnDragListener to null, so that no further drag & dropping on this TextView can be done
                         dropTarget.setOnDragListener(null);
-                    }
-                    else
+                    } else
                         //displays message if first character of dropTarget is not equal to first character of dropped
                         Toast.makeText(SendActivity.this, dropTarget.getText().toString() + "is not " + dropped.getText().toString(), Toast.LENGTH_LONG).show();
                     break;
@@ -180,14 +174,15 @@ public class SendActivity extends AppCompatActivity {
             }
             return true;
         }
+
     }
 
-    public void reset(View view)
-    {
+
+    public void reset(View view) {
         input1.setVisibility(TextView.VISIBLE);
-
+        choice1.setText("A for ");
+        choice1.setTag(null);
+        choice1.setTypeface(Typeface.DEFAULT);
+        choice1.setOnDragListener(new ChoiceDragListener());
     }
-
-
-
 }

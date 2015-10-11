@@ -39,6 +39,10 @@
             android:name=".SendActivity"
             android:label="@string/title_activity_send" >
         </activity>
+        <activity
+            android:name=".SendMsgActivity"
+            android:label="@string/title_activity_send_msg" >
+        </activity>
     </application>
 
 </manifest>

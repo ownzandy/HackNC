@@ -25,10 +25,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
-        android:onClick="startSend"
         android:layout_marginTop="72dp"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/startSend" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/writeMsg"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/startSend"
+        android:layout_alignStart="@+id/startSend" />
 
 </RelativeLayout>
 <!-- From: file:/Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/res/layout/activity_main.xml -->

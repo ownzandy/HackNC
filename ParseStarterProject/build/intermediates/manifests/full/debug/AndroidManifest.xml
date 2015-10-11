@@ -45,6 +45,10 @@
             android:name="com.parse.starter.SendActivity"
             android:label="@string/title_activity_send" >
         </activity>
+        <activity
+            android:name="com.parse.starter.SendMsgActivity"
+            android:label="@string/title_activity_send_msg" >
+        </activity>
     </application>
 
 </manifest>
