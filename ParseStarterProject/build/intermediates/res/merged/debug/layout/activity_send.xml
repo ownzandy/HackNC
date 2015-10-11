@@ -5,6 +5,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/normal"
     tools:context="com.parse.starter.SendActivity">
 
     <TextView
@@ -33,5 +34,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="73dp"
         android:src="@drawable/bubble" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:id="@+id/swipe"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 <!-- From: file:/Users/paulcruz/AndroidStudioProjects/HackNC/ParseStarterProject/src/main/res/layout/activity_send.xml -->

@@ -453,7 +453,7 @@ int id default_activity_button 0x7f0c002b
 int id dialog 0x7f0c001d
 int id disableHome 0x7f0c000e
 int id dropdown 0x7f0c001e
-int id editText 0x7f0c0059
+int id editText 0x7f0c005a
 int id edit_query 0x7f0c0044
 int id end 0x7f0c0016
 int id end_padder 0x7f0c006a
@@ -477,12 +477,12 @@ int id media_actions 0x7f0c0061
 int id middle 0x7f0c0017
 int id multiply 0x7f0c0020
 int id never 0x7f0c001b
-int id nextButton 0x7f0c005b
+int id nextButton 0x7f0c005c
 int id none 0x7f0c0010
 int id normal 0x7f0c000c
-int id parent 0x7f0c0058
+int id parent 0x7f0c0059
 int id parentPanel 0x7f0c002f
-int id picButton 0x7f0c005a
+int id picButton 0x7f0c005b
 int id progress_circular 0x7f0c0007
 int id progress_horizontal 0x7f0c0008
 int id radio 0x7f0c003c
@@ -510,8 +510,8 @@ int id src_over 0x7f0c0024
 int id startSend 0x7f0c0053
 int id status_bar_latest_event_content 0x7f0c0060
 int id submit_area 0x7f0c004d
+int id swipe 0x7f0c0058
 int id tabMode 0x7f0c000d
-int id test 0x7f0c005c
 int id text 0x7f0c0068
 int id text2 0x7f0c0066
 int id textSpacerNoButtons 0x7f0c0035

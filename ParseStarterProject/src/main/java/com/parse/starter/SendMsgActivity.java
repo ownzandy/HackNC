@@ -176,6 +176,8 @@ public class SendMsgActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(), SendActivity.class);
+                i.putExtra("fileUri", fileUri.toString());
+                i.putExtra("message", myText.getText().toString());
                 startActivity(i);
             }
         });

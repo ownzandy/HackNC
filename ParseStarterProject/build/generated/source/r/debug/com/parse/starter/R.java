@@ -1570,7 +1570,7 @@ containing a value of this type.
         public static final int dialog=0x7f0c001d;
         public static final int disableHome=0x7f0c000e;
         public static final int dropdown=0x7f0c001e;
-        public static final int editText=0x7f0c0059;
+        public static final int editText=0x7f0c005a;
         public static final int edit_query=0x7f0c0044;
         public static final int end=0x7f0c0016;
         public static final int end_padder=0x7f0c006a;
@@ -1594,12 +1594,12 @@ containing a value of this type.
         public static final int middle=0x7f0c0017;
         public static final int multiply=0x7f0c0020;
         public static final int never=0x7f0c001b;
-        public static final int nextButton=0x7f0c005b;
+        public static final int nextButton=0x7f0c005c;
         public static final int none=0x7f0c0010;
         public static final int normal=0x7f0c000c;
-        public static final int parent=0x7f0c0058;
+        public static final int parent=0x7f0c0059;
         public static final int parentPanel=0x7f0c002f;
-        public static final int picButton=0x7f0c005a;
+        public static final int picButton=0x7f0c005b;
         public static final int progress_circular=0x7f0c0007;
         public static final int progress_horizontal=0x7f0c0008;
         public static final int radio=0x7f0c003c;
@@ -1627,8 +1627,8 @@ containing a value of this type.
         public static final int startSend=0x7f0c0053;
         public static final int status_bar_latest_event_content=0x7f0c0060;
         public static final int submit_area=0x7f0c004d;
+        public static final int swipe=0x7f0c0058;
         public static final int tabMode=0x7f0c000d;
-        public static final int test=0x7f0c005c;
         public static final int text=0x7f0c0068;
         public static final int text2=0x7f0c0066;
         public static final int textSpacerNoButtons=0x7f0c0035;

@@ -1,5 +1,7 @@
 package com.parse.starter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.VelocityTrackerCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -10,11 +12,20 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
 public class SendActivity extends ActionBarActivity {
     private static final String DEBUG_TAG = "Velocity";
     private VelocityTracker mVelocityTracker = null;
     TextView x;
     TextView y;
+    private float lastXVel=0;
+    private float lastYVel=0;
+    private String m;
+    private Uri fUri;
     private static ImageView bubz;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +35,25 @@ public class SendActivity extends ActionBarActivity {
         x = (TextView) findViewById(R.id.velocityX);
         y = (TextView) findViewById(R.id.velocityY);
         bubz = (ImageView) findViewById(R.id.bubble);
-    }
+        Intent intent = getIntent();
+        fUri = Uri.parse(intent.getStringExtra("fileUri"));
+        m = intent.getStringExtra("message");
 
+
+    }
+    public byte[] readBytes(InputStream inputStream) throws IOException{
+        if(inputStream == null){
+            return null;
+        }
+        ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
+        int bufferSize = 1024;
+        byte[] buffer = new byte[bufferSize];
+        int len = 0;
+        while((len = inputStream.read(buffer)) != -1){
+            byteBuffer.write(buffer, 0, len);
+        }
+        return byteBuffer.toByteArray();
+    }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int index = event.getActionIndex();
@@ -34,7 +62,7 @@ public class SendActivity extends ActionBarActivity {
         float xpos = event.getX();
         float ypos = event.getY();
         bubz.setX(xpos - bubz.getWidth() / 2);
-        bubz.setY(ypos - bubz.getHeight() * 5 / 4);
+        bubz.setY(ypos - bubz.getHeight() * 2 / 2);
 
         switch (action) {
 
@@ -65,8 +93,12 @@ public class SendActivity extends ActionBarActivity {
                         VelocityTrackerCompat.getYVelocity(mVelocityTracker,
                                 pointerId));
 
-                x.setText("X Velocity = " + VelocityTrackerCompat.getXVelocity(mVelocityTracker, pointerId) + "\n X position: " + xpos);
-                y.setText("Y Velocity = " + VelocityTrackerCompat.getYVelocity(mVelocityTracker, pointerId) + "\n Y position: " + ypos);
+
+                lastXVel = VelocityTrackerCompat.getXVelocity(mVelocityTracker, pointerId);
+                lastYVel = VelocityTrackerCompat.getYVelocity(mVelocityTracker, pointerId);
+                x.setText("X Velocity = " + lastXVel + "\n X position: " + xpos);
+                y.setText("Y Velocity = " + lastYVel + "\n Y position: " + ypos);
+
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
@@ -74,6 +106,23 @@ public class SendActivity extends ActionBarActivity {
                 mVelocityTracker.recycle();
                 mVelocityTracker = null;
                 bubz.setVisibility(View.INVISIBLE);
+                if(fUri == null){
+                    byte[] inputData = null;
+                    // upload m, lastXVel, lastYVel
+
+                }
+                else{
+                    try {
+                        InputStream iStream = getContentResolver().openInputStream(fUri);
+                        byte[] inputData = readBytes(iStream);
+                        //upload inputData, m, lastXVel, lastYVel
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                Log.d("SendActivity", m);
+                Log.d("SendActivity", fUri.toString());
                 break;
         }
         return true;
