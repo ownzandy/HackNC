@@ -16,9 +16,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.parse.ParseAnalytics;
-import com.parse.Parse;
-import com.parse.ParseObject;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.content.Context;
+import java.io.*;
+import android.view.Gravity;
+import android.content.*;
+
+
+import com.parse.*;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -27,6 +33,7 @@ public class MainActivity extends ActionBarActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     ParseAnalytics.trackAppOpenedInBackground(getIntent());

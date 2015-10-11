@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:10:1-48:12
+ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:10:1-58:12
 	package
 		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:11:5-32
 		INJECTED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml
@@ -22,9 +22,10 @@ ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/Androi
 	android:name
 		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:14:22-76
 application
-ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:16:5-46:19
+ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:16:5-56:19
 MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.0] /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.esri.arcgis.android:arcgis-android:10.2.7] /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.esri.arcgis.android/arcgis-android/10.2.7/AndroidManifest.xml:11:5-20
 	android:label
 		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:20:9-41
 	android:allowBackup
@@ -70,15 +71,23 @@ ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/Androi
 	android:name
 		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:39:13-41
 activity#com.parse.starter.SendMsgActivity
-ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:42:9-45:20
+ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:42:9-47:20
 	android:label
 		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:44:13-60
 	android:name
 		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:43:13-44
+activity#com.parse.starter.EsriActivity
+ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:48:9-51:20
+	android:label
+		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:50:13-56
+	android:name
+		ADDED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml:49:13-41
 uses-sdk
 INJECTED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:appcompat-v7:22.2.0] /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.0] /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [com.esri.arcgis.android:arcgis-android:10.2.7] /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.esri.arcgis.android/arcgis-android/10.2.7/AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
 		INJECTED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml
 		INJECTED from /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/AndroidManifest.xml

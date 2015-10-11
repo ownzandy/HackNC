@@ -10,8 +10,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/velocityx"
+        android:text="X Velocity = "
+        android:id="@+id/velocityX"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -19,27 +19,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/velocityy"
-        android:layout_below="@+id/velocityx"
+        android:text="Y Velocity = "
+        android:id="@+id/velocityY"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/velocityX" />
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="input"
-        android:id="@+id/input_1"
-        android:layout_below="@+id/velocityy"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="choice"
-        android:id="@+id/choice_1"
-        android:layout_below="@+id/input_1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/bubble"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp"
+        android:src="@drawable/bubble" />
 </RelativeLayout>
 <!-- From: file:/Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/res/layout/activity_send.xml -->
