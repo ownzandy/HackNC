@@ -259,6 +259,7 @@ org/codehaus/jackson/JsonGenerator.class
 android/support/v4/app/LoaderManagerImpl.class
 com/esri/android/map/popup/ArcGISDescriptionAdapter.class
 com/esri/android/map/MapView$5.class
+com/parse/starter/SendMsgActivity$2.class
 android/support/v4/app/FragmentManagerImpl$4.class
 android/support/annotation/CheckResult.class
 android/support/annotation/AnimRes.class

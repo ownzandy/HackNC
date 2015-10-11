@@ -28,6 +28,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:src="@drawable/ic_camera_alt_white_12dp"
+        android:onClick="startCamera"
         android:background="@null" />
 
     <ImageButton
@@ -43,6 +44,21 @@
         android:layout_alignParentEnd="true"
         android:src="@drawable/sendbutton"
         android:background="@null" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/test"
+        android:layout_above="@+id/nextButton"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
 <!-- From: file:/Users/Thomas/Desktop/code/HackNC/ParseStarterProject/src/main/res/layout/activity_send_msg.xml -->
