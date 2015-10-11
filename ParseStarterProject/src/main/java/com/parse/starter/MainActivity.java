@@ -29,7 +29,7 @@ import com.parse.*;
 public class MainActivity extends ActionBarActivity {
 
   private Button writeMsg;
-  private Button send;
+  private Button seeMsg;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,9 @@ public class MainActivity extends ActionBarActivity {
 
     //temp testing buttons
     writeMsg = (Button) findViewById(R.id.writeMsg);
-    send = (Button) findViewById(R.id.startSend);
+    seeMsg = (Button) findViewById(R.id.seeMsg);
     writeMsgOnClick();
-    startSend();
+    seeMsgOnClick();
 
   }
 
@@ -63,11 +63,11 @@ public class MainActivity extends ActionBarActivity {
     });
   }
 
-  public void startSend() {
-    send.setOnClickListener(new View.OnClickListener() {
+  public void seeMsgOnClick() {
+    seeMsg.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = new Intent(getBaseContext(), SendActivity.class);
+        Intent intent = new Intent(getBaseContext(), receiveMsgActivity.class);
         startActivity(intent);
       }
     });

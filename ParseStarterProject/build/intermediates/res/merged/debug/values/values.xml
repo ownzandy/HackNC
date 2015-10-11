@@ -228,8 +228,10 @@
     <eat-comment/>
     <string name="title_activity_esri">EsriActivity</string>
     <string name="title_activity_parse">parseActivity</string>
+    <string name="title_activity_receive_msg">receiveMsgActivity</string>
     <string name="title_activity_send">SendActivity</string>
     <string name="title_activity_send_msg">SendMsgActivity</string>
+    <string name="title_activity_splash">Splash</string>
     <!-- From: file:/Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

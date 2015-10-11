@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -33,7 +32,6 @@ public class SendMsgActivity extends ActionBarActivity {
     private ImageView fromCam;
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
     private Uri fileUri;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,9 +114,7 @@ public class SendMsgActivity extends ActionBarActivity {
 
     }
 
-
     public void embedImage(){
-
             RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.parent);
 
             ImageView imageView = new ImageView(this);
@@ -175,6 +171,10 @@ public class SendMsgActivity extends ActionBarActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //get text from editText
+                String message = myText.getText().toString();
+                //get image files
+                
                 Intent i = new Intent(getBaseContext(), SendActivity.class);
                 startActivity(i);
             }

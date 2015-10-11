@@ -65,6 +65,7 @@ org/codehaus/jackson/map/ser/StdSerializers$SerializableSerializer.class
 android/support/annotation/InterpolatorRes.class
 org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$ByteDeser.class
 org/codehaus/jackson/map/jsontype/impl/AsWrapperTypeDeserializer.class
+com/parse/starter/receiveMsgActivity.class
 org/codehaus/jackson/map/type/SimpleType.class
 -keep class com.parse.starter.StarterApplication {
 org/codehaus/jackson/annotate/JsonAutoDetect$Visibility.class
@@ -215,6 +216,7 @@ android/support/v7/widget/ActionMenuView$LayoutParams.class
 org/codehaus/jackson/map/JsonSerializable.class
 com/esri/core/internal/util/a.class
 org/codehaus/jackson/map/ser/std/StringCollectionSerializer.class
+com/parse/starter/Splash.class
 -keep public class * extends java.lang.annotation.Annotation {
 org/codehaus/jackson/map/ser/MapSerializer.class
 com/esri/core/symbol/SimpleMarkerSymbol$STYLE.class
@@ -272,6 +274,7 @@ org/codehaus/jackson/annotate/JsonAnyGetter.class
 org/codehaus/jackson/map/ser/StdSerializers$NumberSerializer.class
 org/codehaus/jackson/map/ser/std/TokenBufferSerializer.class
 com/esri/android/map/event/OnPanListener.class
+-keep class com.parse.starter.receiveMsgActivity { <init>(); }
 com/parse/Parse.class
 com/parse/ParseACL.class
 android/support/v4/widget/MaterialProgressDrawable$2.class
@@ -290,6 +293,7 @@ org/codehaus/jackson/map/deser/std/ClassDeserializer.class
 org/codehaus/jackson/map/introspect/BasicClassIntrospector$GetterMethodFilter.class
 com/esri/core/map/Graphic.class
 com/esri/android/map/event/OnZoomListener.class
+-keep class com.parse.starter.Splash { <init>(); }
 org/codehaus/jackson/map/type/MapType.class
 android/support/v7/internal/widget/AdapterViewCompat.class
 org/codehaus/jackson/map/JsonDeserializer.class
@@ -371,6 +375,7 @@ bolts/WebViewAppLinkResolver$2$2.class
 com/esri/android/map/MapView$2.class
 org/codehaus/jackson/map/deser/EnumResolver.class
 org/codehaus/jackson/map/ser/StdSerializers$FloatSerializer.class
+com/parse/starter/Splash$1.class
 org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$FloatDeser.class
 org/codehaus/jackson/map/ser/std/StdArraySerializers$FloatArraySerializer.class
 com/esri/core/tasks/ags/geoprocessing/GPParameter.class

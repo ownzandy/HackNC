@@ -27,7 +27,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/ic_camera_alt_white_12dp"
+        android:src="@drawable/ic_camera_alt_white_24dp"
         android:onClick="startCamera"
         android:background="@null" />
 
@@ -48,8 +48,13 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/editText"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="200dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/myIcon"
+        android:src="@drawable/iconblue"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

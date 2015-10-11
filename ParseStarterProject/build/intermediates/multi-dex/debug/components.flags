@@ -20,6 +20,10 @@
     <init>();
 }
 
+-keep class com.parse.starter.Splash {
+    <init>();
+}
+
 -keep class com.parse.starter.SendActivity {
     <init>();
 }
@@ -29,6 +33,10 @@
 }
 
 -keep class com.parse.starter.EsriActivity {
+    <init>();
+}
+
+-keep class com.parse.starter.receiveMsgActivity {
     <init>();
 }
 
