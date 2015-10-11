@@ -28,6 +28,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:src="@drawable/ic_camera_alt_white_12dp"
+        android:onClick="startCamera"
         android:background="@null" />
 
     <ImageButton
@@ -43,5 +44,12 @@
         android:layout_alignParentEnd="true"
         android:src="@drawable/sendbutton"
         android:background="@null" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
