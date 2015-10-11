@@ -36,6 +36,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".SendActivity"
+            android:label="@string/title_activity_send" >
+        </activity>
+        <activity
+            android:name=".SendMsgActivity"
+            android:label="@string/title_activity_send_msg" >
             android:name=".parseActivity"
             android:label="@string/title_activity_parse" >
         </activity>
@@ -43,10 +49,10 @@
             android:name=".EsriActivity"
             android:label="@string/title_activity_esri" >
         </activity>
-        <activity
-            android:name=".SendActivity"
-            android:label="@string/title_activity_send" >
-        </activity>
+        <!--<activity-->
+            <!--android:name=".SendActivity"-->
+            <!--android:label="@string/title_activity_send" >-->
+        <!--</activity>-->
     </application>
 
 </manifest>

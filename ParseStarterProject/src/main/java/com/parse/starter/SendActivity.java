@@ -16,14 +16,16 @@ public class SendActivity extends ActionBarActivity {
     TextView x;
     TextView y;
     private static ImageView bubz;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
 
         x = (TextView) findViewById(R.id.velocityX);
         y = (TextView) findViewById(R.id.velocityY);
-        bubz = (ImageView)findViewById(R.id.bubble);
+        bubz = (ImageView) findViewById(R.id.bubble);
     }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int index = event.getActionIndex();
@@ -31,18 +33,17 @@ public class SendActivity extends ActionBarActivity {
         int pointerId = event.getPointerId(index);
         float xpos = event.getX();
         float ypos = event.getY();
-        bubz.setX(xpos-bubz.getWidth()/2);
+        bubz.setX(xpos - bubz.getWidth() / 2);
         bubz.setY(ypos - bubz.getHeight() * 5 / 4);
 
-        switch(action) {
+        switch (action) {
 
             case MotionEvent.ACTION_DOWN:
                 bubz.setVisibility(View.VISIBLE);
-                if(mVelocityTracker == null) {
+                if (mVelocityTracker == null) {
                     // Retrieve a new VelocityTracker object to watch the velocity of a motion.
                     mVelocityTracker = VelocityTracker.obtain();
-                }
-                else {
+                } else {
                     // Reset the velocity tracker back to its initial state.
                     mVelocityTracker.clear();
                 }
@@ -64,8 +65,8 @@ public class SendActivity extends ActionBarActivity {
                         VelocityTrackerCompat.getYVelocity(mVelocityTracker,
                                 pointerId));
 
-                x.setText("X Velocity = "+VelocityTrackerCompat.getXVelocity(mVelocityTracker, pointerId)+"\n X position: "+xpos);
-                y.setText("Y Velocity = "+VelocityTrackerCompat.getYVelocity(mVelocityTracker, pointerId)+"\n Y position: "+ypos);
+                x.setText("X Velocity = " + VelocityTrackerCompat.getXVelocity(mVelocityTracker, pointerId) + "\n X position: " + xpos);
+                y.setText("Y Velocity = " + VelocityTrackerCompat.getYVelocity(mVelocityTracker, pointerId) + "\n Y position: " + ypos);
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
