@@ -9,8 +9,8 @@ org/codehaus/jackson/map/MapperConfig$Impl.class
 org/codehaus/jackson/map/JsonDeserializer$None.class
 com/parse/ParsePlugins.class
 org/codehaus/jackson/map/ObjectMapper.class
-android/support/v4/view/MenuCompat.class
 org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$IntDeser.class
+android/support/v4/view/MenuCompat.class
 com/parse/starter/R$layout.class
 org/codehaus/jackson/map/deser/BeanDeserializer.class
 android/support/annotation/IdRes.class
@@ -42,8 +42,8 @@ org/codehaus/jackson/map/deser/FromStringDeserializer.class
 -keep class com.parse.starter.SendActivity { <init>(); }
 org/codehaus/jackson/map/deser/std/StdDeserializer$BooleanDeserializer.class
 android/support/v4/widget/MaterialProgressDrawable.class
-android/support/v4/app/ActionBarDrawerToggle.class
 org/codehaus/jackson/map/MapperConfig.class
+android/support/v4/app/ActionBarDrawerToggle.class
 android/support/v7/app/ActionBarDrawerToggle$Delegate.class
 org/codehaus/jackson/map/ser/std/StdArraySerializers$ShortArraySerializer.class
 android/support/v7/widget/LinearLayoutCompat$OrientationMode.class
@@ -55,8 +55,8 @@ com/esri/android/map/MapView$6.class
 com/esri/core/tasks/ags/geoprocessing/GPFeatureRecordSetLayer.class
 org/codehaus/jackson/map/KeyDeserializer$None.class
 org/codehaus/jackson/annotate/JsonMethod.class
-org/codehaus/jackson/JsonNode.class
 org/codehaus/jackson/map/deser/std/TokenBufferDeserializer.class
+org/codehaus/jackson/JsonNode.class
 org/codehaus/jackson/map/introspect/BasicBeanDescription.class
 }
 android/support/v4/widget/MaterialProgressDrawable$ProgressDrawableSize.class
@@ -134,8 +134,8 @@ com/esri/android/map/MapView$8.class
 org/codehaus/jackson/map/deser/std/EnumMapDeserializer.class
 android/support/annotation/MenuRes.class
 com/parse/ParseRole.class
-org/codehaus/jackson/map/ser/std/StdArraySerializers$CharArraySerializer.class
 com/parse/ParsePin.class
+org/codehaus/jackson/map/ser/std/StdArraySerializers$CharArraySerializer.class
 android/support/v4/view/LayoutInflaterFactory.class
 android/support/v7/view/ActionMode$Callback.class
 org/codehaus/jackson/annotate/JsonIgnore.class
@@ -165,8 +165,8 @@ android/support/v7/app/ActionBar.class
 org/codehaus/jackson/map/type/CollectionLikeType.class
 org/codehaus/jackson/map/ClassIntrospector.class
 android/support/v4/view/animation/LookupTableInterpolator.class
-org/codehaus/jackson/impl/ReaderBasedParserBase.class
 org/codehaus/jackson/map/introspect/BasicClassIntrospector.class
+org/codehaus/jackson/impl/ReaderBasedParserBase.class
 org/codehaus/jackson/annotate/JsonIgnoreProperties.class
 android/support/v7/appcompat/R$styleable.class
 com/esri/android/map/MapView$7.class
@@ -184,8 +184,8 @@ org/codehaus/jackson/map/deser/CustomDeserializerFactory.class
 org/codehaus/jackson/map/annotate/JsonValueInstantiator.class
 org/codehaus/jackson/map/jsontype/impl/AsArrayTypeDeserializer.class
 org/codehaus/jackson/map/ser/std/ToStringSerializer.class
-org/codehaus/jackson/map/ser/std/StdArraySerializers$DoubleArraySerializer.class
 com/parse/ParseSQLiteCursor.class
+org/codehaus/jackson/map/ser/std/StdArraySerializers$DoubleArraySerializer.class
 org/codehaus/jackson/map/deser/ThrowableDeserializer.class
 org/codehaus/jackson/map/deser/std/StdDeserializer$CharacterDeserializer.class
 bolts/AggregateException.class
@@ -248,8 +248,8 @@ org/codehaus/jackson/map/ser/ScalarSerializerBase.class
 org/codehaus/jackson/map/TypeDeserializer.class
     void attachBaseContext(android.content.Context);
 com/parse/ParseUser.class
-android/support/v4/widget/CursorAdapter.class
 org/codehaus/jackson/map/ser/std/SerializableWithTypeSerializer.class
+android/support/v4/widget/CursorAdapter.class
 org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$DoubleDeser.class
 com/parse/starter/StarterApplication.class
 android/support/v4/widget/SimpleCursorAdapter.class
@@ -372,9 +372,9 @@ org/codehaus/jackson/map/deser/EnumResolver.class
 org/codehaus/jackson/map/ser/StdSerializers$FloatSerializer.class
 org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$FloatDeser.class
 org/codehaus/jackson/map/ser/std/StdArraySerializers$FloatArraySerializer.class
-com/esri/core/tasks/ags/geoprocessing/GPParameter.class
-org/codehaus/jackson/map/SerializerFactory.class
 com/parse/EventuallyPin.class
+org/codehaus/jackson/map/SerializerFactory.class
+com/esri/core/tasks/ags/geoprocessing/GPParameter.class
 android/support/annotation/LayoutRes.class
 com/esri/core/map/Feature.class
 com/esri/android/map/GroupLayer.class

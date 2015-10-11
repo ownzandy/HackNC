@@ -1,14 +1,14 @@
--injars /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/multi-dex/debug/allclasses.jar
--outjars /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/multi-dex/debug/componentClasses.jar
+-injars /Users/paulcruz/AndroidStudioProjects/HackNC/ParseStarterProject/build/intermediates/multi-dex/debug/allclasses.jar
+-outjars /Users/paulcruz/AndroidStudioProjects/HackNC/ParseStarterProject/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars /Users/Thomas/Library/Android/sdk/build-tools/22.0.1/lib/shrinkedAndroid.jar
+-libraryjars /Users/paulcruz/Library/Android/sdk/build-tools/22.0.1/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontpreverify
 -dontwarn
--printconfiguration /Users/Thomas/Desktop/code/HackNC/ParseStarterProject/build/intermediates/multi-dex/debug/components.flags
+-printconfiguration /Users/paulcruz/AndroidStudioProjects/HackNC/ParseStarterProject/build/intermediates/multi-dex/debug/components.flags
 
 
 -keep class com.parse.starter.StarterApplication {
