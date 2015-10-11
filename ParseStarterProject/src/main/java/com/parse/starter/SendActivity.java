@@ -16,28 +16,50 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import com.esri.android.map.LocationDisplayManager;
+import com.esri.android.map.MapView;
+import com.esri.core.map.Graphic;
+import com.esri.android.map.GraphicsLayer;
+import com.esri.android.map.MapView;
+import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
+import com.esri.android.map.event.OnStatusChangedListener;
+import com.esri.core.geometry.GeometryEngine;
+import com.esri.core.geometry.Point;
+import com.esri.core.geometry.SpatialReference;
+import com.esri.core.geometry.MapGeometry;
+import com.esri.core.symbol.*;
+import com.esri.core.geometry.*;
+import com.esri.android.runtime.ArcGISRuntime.License;
+import com.parse.*;
 
 public class SendActivity extends ActionBarActivity {
+
+    MapView mapView;
     private static final String DEBUG_TAG = "Velocity";
     private VelocityTracker mVelocityTracker = null;
     TextView x;
     TextView y;
     private float lastXVel=0;
     private float lastYVel=0;
+    private int initX;
+    private int initY;
     private String m;
     private Uri fUri;
     private static ImageView bubz;
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
-
+        mapView = (MapView)findViewById(R.id.map2);
         x = (TextView) findViewById(R.id.velocityX);
         y = (TextView) findViewById(R.id.velocityY);
         bubz = (ImageView) findViewById(R.id.bubble);
         Intent intent = getIntent();
         fUri = Uri.parse(intent.getStringExtra("fileUri"));
         m = intent.getStringExtra("message");
+        initX = intent.getIntExtra("xpos", 0);
+        initY = intent.getIntExtra("ypos", 0);
 
 
     }
@@ -115,8 +137,32 @@ public class SendActivity extends ActionBarActivity {
                     try {
                         InputStream iStream = getContentResolver().openInputStream(fUri);
                         byte[] inputData = readBytes(iStream);
-                        //upload inputData, m, lastXVel, lastYVel
 
+                        //save user message to server
+                        String message = m;
+                        ParseObject fling = new ParseObject("Fling");
+                        //save x position
+                        fling.put("xpos", initX);
+                        //save y position
+                        fling.put("ypos", initY);
+                        //save x velocity
+                        fling.put("xvel", (int) lastXVel);
+                        //save y velocity
+                        fling.put("yvel", (int) lastYVel);
+                        //save message
+                        fling.put("message", message);
+                        //save picture
+                        ParseFile file = new ParseFile("picture.jpg", inputData);
+                        //save justSent boolean
+                        fling.put("justSent", true);
+                        file.saveInBackground();
+                        fling.put("picture", file);
+                        //saves to parse
+                        fling.saveInBackground();
+                        String id = fling.getObjectId();
+                        Intent esri = new Intent(SendActivity.this, EsriActivity.class);
+                        esri.putExtra("parent", "SendActivity");
+                        startActivity(esri);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

@@ -44,5 +44,13 @@
         android:id="@+id/swipe"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <com.esri.android.map.MapView
+        android:id="@+id/map2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        mapoptions.MapType="Streets"
+        mapoptions.ZoomLevel="16">
+    </com.esri.android.map.MapView>
 </RelativeLayout>
-<!-- From: file:/Users/paulcruz/AndroidStudioProjects/HackNC/ParseStarterProject/src/main/res/layout/activity_send.xml -->
+<!-- From: file:/Users/ownzandy/Documents/HackNC/ParseStarterProject/src/main/res/layout/activity_send.xml -->
