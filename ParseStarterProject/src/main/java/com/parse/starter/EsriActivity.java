@@ -131,7 +131,7 @@ public class EsriActivity extends Activity {
                     initArr[0] = (int) initial.getX();
                     initArr[1] = (int) initial.getY();
                     boolean justSent = p.getBoolean("justSent");
-                    if (calcDistance(posArr, initArr) < 100 && !justSent) {
+                    if (calcDistance(posArr, initArr) < 150 && !justSent) {
                         String pid = p.getObjectId();
                         String message = p.getString("message");
                         Intent receive = new Intent(EsriActivity.this, receiveMsgActivity.class);
@@ -158,12 +158,12 @@ public class EsriActivity extends Activity {
                             }
                         }); */
                     }
-                    /*
+
                     if (System.currentTimeMillis() - p.getCreatedAt().getTime() > 2000) {
                         p.put("justSent", false);
                         p.saveInBackground();
                     }
-                    */
+
                     Point pointGeometry = new Point(posArr[0], posArr[1]);
                     Graphic pointGraphic = new Graphic(pointGeometry, simpleMarker);
                     graphicsLayer.addGraphic(pointGraphic);
